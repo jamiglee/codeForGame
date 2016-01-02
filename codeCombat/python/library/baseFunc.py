@@ -6,8 +6,8 @@ def summonFriend(friendType):
         self.summon(friendType)
 
 def moveToPosition(pos):
-  if self.isReady("jump"):
-      self.jumpTo(coin)
-  else:
-      #self.moveXY(coin.pos.x, coin.pos.y)
-      self.move(coin.pos)
+    while self.distanceTo(pos) > 0:
+        if self.isReady("jump"):
+          self.jumpTo(pos)
+        else:
+          self.move(pos)
